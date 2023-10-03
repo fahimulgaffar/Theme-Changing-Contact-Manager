@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+	<cursor>
+		<Cursor fx:constant="DEFAULT" />
+	</cursor>
+	<effect>
+		<DropShadow />
+	</effect>
+	<children>
+		<ListView fx:id="ListViewer" layoutX="53.0" layoutY="37.0" prefHeight="527.0" prefWidth="268.0" />
+		<VBox layoutX="348.0" layoutY="37.0" prefHeight="527.0" prefWidth="314.0">
+			<children>
+				<HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="268.0">
+					<children>
+						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" wrappingWidth="86.98307228088379" />
+						<TextField fx:id="FirstNameTextField" prefHeight="26.0" prefWidth="221.0" promptText="Enter First Name" />
+					</children>
+					<VBox.margin>
+						<Insets />
+					</VBox.margin>
+					<padding>
+						<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					</padding>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="268.0">
+					<children>
+						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" wrappingWidth="86.98307228088379" />
+						<TextField fx:id="LastNameTextField" prefHeight="26.0" prefWidth="221.0" promptText="Enter Last Name" />
+					</children>
+					<padding>
+						<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					</padding>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="268.0">
+					<children>
+						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile" wrappingWidth="86.98307228088379" />
+						<TextField fx:id="MobileTextField" prefHeight="26.0" prefWidth="221.0" promptText="Enter Mobile Number" />
+					</children>
+					<padding>
+						<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					</padding>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="268.0">
+					<children>
+						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Home" wrappingWidth="86.98307228088379" />
+						<TextField fx:id="HomeTextField" prefHeight="26.0" prefWidth="221.0" promptText="Enter Home Number" />
+					</children>
+					<padding>
+						<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					</padding>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="268.0">
+					<children>
+						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="86.98307228088379" />
+						<TextField fx:id="EmailTextField" prefHeight="26.0" prefWidth="221.0" promptText="Enter Email Address" />
+					</children>
+					<padding>
+						<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					</padding>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="314.0">
+					<children>
+						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Emergency Contact" wrappingWidth="184.9830722808838" />
+						<CheckBox fx:id="TickBox" mnemonicParsing="false" prefHeight="19.0" prefWidth="170.0" text="Tick For Yes" />
+					</children>
+					<padding>
+						<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					</padding>
+				</HBox>
+      		<Pane prefHeight="228.0" prefWidth="314.0" style="-fx-background-color: LIGHTSTEELBLUE;">
+      			<children>
+      				<ImageView fx:id="ImageViewer" fitHeight="133.0" fitWidth="246.0" layoutX="35.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </ImageView>
+      				<Button layoutX="34.0" layoutY="14.0" mnemonicParsing="false" onAction="#ChooseContactPictureHandler" prefHeight="32.0" prefWidth="246.0" text="CHOOSE CONTACT PICTURE" />
+      			</children>
+      		</Pane>
+			</children>
+		</VBox>
+		<HBox layoutX="54.0" layoutY="573.0" prefHeight="49.0" prefWidth="611.0" spacing="20.0">
+			<children>
+				<Button mnemonicParsing="false" onAction="#AddContactHandler" prefHeight="29.0" prefWidth="109.0" text="Add Contact" />
+				<Button mnemonicParsing="false" onAction="#RemoveContactHandler" prefHeight="29.0" prefWidth="129.0" text="Remove Contact" />
+				<Button mnemonicParsing="false" onAction="#ViewContactHandler" prefHeight="29.0" prefWidth="111.0" text="View Contact" />
+				<Button mnemonicParsing="false" onAction="#ClearListHandler" prefHeight="29.0" prefWidth="98.0" text="Edit List" />
+				<Button mnemonicParsing="false" onAction="#ResetHandler" prefHeight="29.0" prefWidth="87.0" text="Reset" />
+			</children>
+			<padding>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</padding>
+		</HBox>
+		<ToggleButton fx:id="DarkMode" layoutX="627.0" layoutY="5.0" mnemonicParsing="false" onAction="#DarkModeHandler" prefHeight="32.0" prefWidth="87.0" text="Dark Mode" />
+	</children>
+</Pane>
